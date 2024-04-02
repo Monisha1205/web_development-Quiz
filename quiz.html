@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz</title>
+</head>
+<body>
+    <form action="{% url 'quiz' %}" method="post">
+        {% csrf_token %}
+        <h2>Question 1: What does AI stand for?</h2>
+        <input type="radio" name="question1" value="1"> Automated Intelligence<br>
+        <input type="radio" name="question1" value="2"> Artificial Information<br>
+        <input type="radio" name="question1" value="3"> Artificial Intelligence<br>
+        <input type="radio" name="question1" value="4"> Automated Information<br>
+
+        <h2>Question 2: Which of the following is not a subset of AI?</h2>
+        <input type="radio" name="question2" value="1"> Machine Learning<br>
+        <input type="radio" name="question2" value="2"> Deep Learning<br>
+        <input type="radio" name="question2" value="3"> Natural Language Processing<br>
+        <input type="radio" name="question2" value="4"> Virtual Reality<br>
+
+        <h2>Question 3: What is the primary challenge in unsupervised learning?</h2>
+        <input type="radio" name="question3" value="1"> Finding the optimal policy<br>
+        <input type="radio" name="question3" value="2"> Discovering patterns or structures in data without explicit labels<br>
+        <input type="radio" name="question3" value="3"> Providing labeled data for training<br>
+        <input type="radio" name="question3" value="4"> Determining the correct output for a given input<br>
+
+        <h2>Question 4: What is the process of training an AI system to perform a task by providing it with labeled examples?</h2>
+        <input type="radio" name="question4" value="1"> Unsupervised Learning<br>
+        <input type="radio" name="question4" value="2"> Reinforcement Learning<br>
+        <input type="radio" name="question4" value="3"> Supervised Learning<br>
+        <input type="radio" name="question4" value="4"> Semi-supervised Learning<br>
+
+        <h2>Question 5: Which of the following is an example of a supervised learning algorithm?</h2>
+        <input type="radio" name="question5" value="1"> K-means clustering<br>
+        <input type="radio" name="question5" value="2"> Decision Trees<br>
+        <input type="radio" name="question5" value="3"> K-nearest neighbors<br>
+        <input type="radio" name="question5" value="4"> Reinforcement Learning<br>
+
+
+
+        <input type="submit" value="Submit">
+    </form>
+</body>
+</html>
